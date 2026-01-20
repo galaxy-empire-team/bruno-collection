@@ -1,0 +1,23 @@
+meta {
+  name: UpgradeBuilding
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/planet/building/upgrade
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}",
+    "buildType": "metal_mine"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

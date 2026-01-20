@@ -1,18 +1,18 @@
 meta {
-  name: getCapitol
+  name: GetCapitol
   type: http
   seq: 2
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/user/create
+  url: {{uri}}:{{port}}/api/v1/planet/capitol
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "login": "bormon"
+    "userID": "{{userID}}"
   }
 }
 
