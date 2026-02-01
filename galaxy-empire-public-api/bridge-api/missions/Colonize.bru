@@ -1,0 +1,28 @@
+meta {
+  name: Colonize
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/mission/colonize
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userID": "{{userID}}",
+    "planetFrom": "{{planetID}}",
+    "planetTo": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
