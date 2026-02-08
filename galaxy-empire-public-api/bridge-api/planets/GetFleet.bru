@@ -1,0 +1,22 @@
+meta {
+  name: GetFleet
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/planet/get
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
