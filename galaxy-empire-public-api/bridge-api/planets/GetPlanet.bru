@@ -1,18 +1,18 @@
 meta {
   name: GetPlanet
   type: http
-  seq: 6
+  seq: 2
 }
 
-post {
-  url: {{uri}}:{{port}}/api/v1/planet/capitol
+get {
+  url: {{uri}}:{{port}}/api/v1/planet
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "userID": "{{userID}}"
+    "planetID": "{{planetID}}"
   }
 }
 

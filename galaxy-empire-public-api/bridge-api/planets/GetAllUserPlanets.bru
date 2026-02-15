@@ -1,19 +1,13 @@
 meta {
   name: GetAllUserPlanets
   type: http
-  seq: 5
+  seq: 3
 }
 
-post {
+get {
   url: {{uri}}:{{port}}/api/v1/planet/all
-  body: json
+  body: none
   auth: inherit
-}
-
-body:json {
-  {
-    "userID": "{{userID}}"
-  }
 }
 
 settings {

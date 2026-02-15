@@ -4,7 +4,7 @@ meta {
   seq: 1
 }
 
-post {
+get {
   url: {{uri}}:{{port}}/api/v1/system/planets
   body: json
   auth: inherit
@@ -12,8 +12,8 @@ post {
 
 body:json {
   {
-    "x": 0,
-    "y": 0
+    "x": 1,
+    "y": 4
   }
 }
 
