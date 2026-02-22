@@ -1,0 +1,24 @@
+meta {
+  name: SetReadFlag
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/notification/read
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "notificationIDs":[
+        1
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
