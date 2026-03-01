@@ -1,0 +1,16 @@
+meta {
+  name: GetBuildingsStats
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{uri}}:{{port}}/api/v1/static/buildings
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

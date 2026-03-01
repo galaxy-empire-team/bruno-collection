@@ -1,11 +1,11 @@
 meta {
-  name: Colonize
+  name: Transport
   type: http
-  seq: 3
+  seq: 5
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/mission/colonize
+  url: {{uri}}:{{port}}/api/v1/mission/transport
   body: json
   auth: inherit
 }
@@ -15,8 +15,8 @@ body:json {
     "planetFrom": "{{planetID}}",
     "planetTo": {
       "X": 0,
-      "Y": 0,
-      "Z": 0
+      "Y": 2,
+      "Z": 14
     },
     "cargo": {
       "metal": 100,
@@ -25,12 +25,8 @@ body:json {
     },
     "fleet": [
       {
-        "id": 6,
+        "id": 3,
         "count":5
-      },
-      {
-        "id": 7,
-        "count":1
       }
     ]
   }

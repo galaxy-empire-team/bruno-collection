@@ -1,11 +1,11 @@
 meta {
-  name: Colonize
+  name: Spy
   type: http
-  seq: 3
+  seq: 4
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/mission/colonize
+  url: {{uri}}:{{port}}/api/v1/mission/attack
   body: json
   auth: inherit
 }
@@ -15,22 +15,17 @@ body:json {
     "planetFrom": "{{planetID}}",
     "planetTo": {
       "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "cargo": {
-      "metal": 100,
-      "crystal": 100,
-      "gas": 100
+      "Y": 2,
+      "Z": 14
     },
     "fleet": [
       {
-        "id": 6,
-        "count":5
+        "id": 1,
+        "count":30
       },
       {
-        "id": 7,
-        "count":1
+        "id": 2,
+        "count":100
       }
     ]
   }
