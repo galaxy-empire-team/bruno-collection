@@ -1,0 +1,23 @@
+meta {
+  name: StartResearch
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/planet/building/upgrade
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}",
+    "buildingID": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
