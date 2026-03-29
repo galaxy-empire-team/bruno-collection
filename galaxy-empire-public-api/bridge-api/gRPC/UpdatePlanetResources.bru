@@ -1,0 +1,23 @@
+meta {
+  name: UpdatePlanetResources
+  type: grpc
+  seq: 1
+}
+
+grpc {
+  url: {{uri}}:{{gRPCPort}}
+  method: /planet.v1.PlanetService/UpdatePlanetResources
+  body: grpc
+  auth: none
+  methodType: unary
+}
+
+body:grpc {
+  name: message 1
+  content: '''
+    {
+      "user_id": {{userID}},
+      "planet_id": {{planetID}}
+    }
+  '''
+}
