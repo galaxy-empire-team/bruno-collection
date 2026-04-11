@@ -1,11 +1,11 @@
 meta {
   name: StartResearch
   type: http
-  seq: 7
+  seq: 8
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/planet/building/upgrade
+  url: {{uri}}:{{port}}/api/v1/planet/research/start
   body: json
   auth: inherit
 }
@@ -13,7 +13,7 @@ post {
 body:json {
   {
     "planetID": "{{planetID}}",
-    "buildingID": 1
+    "researchID": 1
   }
 }
 

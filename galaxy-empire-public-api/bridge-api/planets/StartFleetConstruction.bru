@@ -1,11 +1,11 @@
 meta {
   name: StartFleetConstruction
   type: http
-  seq: 8
+  seq: 9
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/planet/research/start
+  url: {{uri}}:{{port}}/api/v1/planet/fleet/construct
   body: json
   auth: inherit
 }
@@ -13,7 +13,8 @@ post {
 body:json {
   {
     "planetID": "{{planetID}}",
-    "researchID": 1
+    "fleetID": 1,
+    "count": 10
   }
 }
 

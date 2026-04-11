@@ -1,0 +1,22 @@
+meta {
+  name: GetResearches
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{uri}}:{{port}}/api/v1/planet/researches
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
