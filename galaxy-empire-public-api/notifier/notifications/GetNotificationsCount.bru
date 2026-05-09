@@ -1,19 +1,18 @@
 meta {
-  name: GetUserNotifications (1)
+  name: GetNotificationsCount
   type: http
-  seq: 2
+  seq: 3
 }
 
 get {
-  url: {{uri}}:{{port}}/api/v1/notification/get
+  url: {{uri}}:{{port}}/api/v1/notifications/count
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "offset":0,
-    "limit": 10
+    "afterID": 0
   }
 }
 

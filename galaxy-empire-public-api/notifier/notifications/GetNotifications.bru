@@ -1,0 +1,23 @@
+meta {
+  name: GetNotifications
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{uri}}:{{port}}/api/v1/notifications
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "afterID":0,
+    "limit": 30
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
