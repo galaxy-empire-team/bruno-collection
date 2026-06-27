@@ -1,0 +1,16 @@
+meta {
+  name: GetUserResources
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{uri}}:{{port}}/api/v1/planet/userresources
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

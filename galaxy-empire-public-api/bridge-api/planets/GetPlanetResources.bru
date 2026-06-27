@@ -1,11 +1,11 @@
 meta {
   name: GetPlanetResources
   type: http
-  seq: 10
+  seq: 6
 }
 
 get {
-  url: {{uri}}:{{port}}/api/v1/planet
+  url: {{uri}}:{{port}}/api/v1/planet/resources
   body: json
   auth: inherit
 }

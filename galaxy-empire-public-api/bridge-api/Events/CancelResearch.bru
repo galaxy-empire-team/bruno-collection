@@ -1,11 +1,11 @@
 meta {
-  name: StartBuildingUpgrade
+  name: CancelResearch
   type: http
-  seq: 6
+  seq: 5
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/planet/building/upgrade
+  url: {{uri}}:{{port}}/api/v1/event/research/cancel
   body: json
   auth: inherit
 }
@@ -13,7 +13,7 @@ post {
 body:json {
   {
     "planetID": "{{planetID}}",
-    "buildingID": 1
+    "researchID": 1
   }
 }
 

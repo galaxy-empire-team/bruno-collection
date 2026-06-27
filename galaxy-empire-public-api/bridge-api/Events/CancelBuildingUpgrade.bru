@@ -1,11 +1,11 @@
 meta {
-  name: StartFleetConstruction
+  name: CancelBuildingUpgrade
   type: http
-  seq: 9
+  seq: 5
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/planet/fleet/construct
+  url: {{uri}}:{{port}}/api/v1/event/building/cancel
   body: json
   auth: inherit
 }
@@ -13,8 +13,7 @@ post {
 body:json {
   {
     "planetID": "{{planetID}}",
-    "fleetID": 1,
-    "count": 10
+    "buildingID": 1
   }
 }
 

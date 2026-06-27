@@ -1,11 +1,11 @@
 meta {
-  name: Spy
+  name: Mist
   type: http
-  seq: 4
+  seq: 8
 }
 
 post {
-  url: {{uri}}:{{port}}/api/v1/mission/spy
+  url: {{uri}}:{{port}}/api/v1/mission/mist
   body: json
   auth: inherit
 }
@@ -23,7 +23,7 @@ body:json {
         "id": 1,
         "count": 10
       }
-    ],
+      ],
     "speedMultiplier": 1
   }
 }

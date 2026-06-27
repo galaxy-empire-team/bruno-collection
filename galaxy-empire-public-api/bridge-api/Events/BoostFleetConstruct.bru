@@ -1,0 +1,26 @@
+meta {
+  name: BoostFleetConstruct
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/event/fleet/boost
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}",
+    "boost": {
+      "id": 2,
+      "count": 1
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

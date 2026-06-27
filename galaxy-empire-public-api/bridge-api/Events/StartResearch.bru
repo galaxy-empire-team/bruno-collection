@@ -1,0 +1,23 @@
+meta {
+  name: StartResearch
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/event/research/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}",
+    "researchID": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,26 @@
+meta {
+  name: BoostResearchUpgrade
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/event/research/boost
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "researchID": 1,
+    "boost": {
+      "id": 1,
+      "count": 1
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
