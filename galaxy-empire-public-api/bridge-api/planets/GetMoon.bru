@@ -1,0 +1,22 @@
+meta {
+  name: GetMoon
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{uri}}:{{port}}/api/v1/planet/moon
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

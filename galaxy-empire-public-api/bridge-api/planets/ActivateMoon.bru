@@ -1,0 +1,24 @@
+meta {
+  name: ActivateMoon
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{uri}}:{{port}}/api/v1/planet/moon/activate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "planetID": "{{planetID}}",
+    "boostID": 1,
+    "count": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
