@@ -1,11 +1,11 @@
 meta {
-  name: ColonizeCapitol
+  name: GetRatings
   type: http
-  seq: 11
+  seq: 1
 }
 
-post {
-  url: {{uri}}:{{port}}/api/v1/planet/capitol/colonize
+get {
+  url: {{uri}}:{{port}}/api/v1/rating
   body: none
   auth: inherit
 }
