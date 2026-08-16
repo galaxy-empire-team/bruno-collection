@@ -1,11 +1,11 @@
 meta {
-  name: GetBuildingsStats
+  name: Get
   type: http
   seq: 1
 }
 
 get {
-  url: {{uri}}:{{port}}/api/v1/static/buildings
+  url: {{uri}}:{{port}}/api/v1/gameconfig/get
   body: none
   auth: inherit
 }
